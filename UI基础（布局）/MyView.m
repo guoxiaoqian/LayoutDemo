@@ -8,11 +8,40 @@
 
 #import "MyView.h"
 #import "MyLayer.h"
+#import "Masonry.h"
+
+#define kUseAutoLayout  1
+
+@interface MyView ()
+
+@property (strong,nonatomic) UILabel* myLabel;
+
+@end
 
 @implementation MyView 
 
 +(Class)layerClass{
     return [MyLayer class];
+}
+
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        
+        self.myLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+        self.myLabel.textAlignment = NSTextAlignmentCenter;
+        self.myLabel.text = @"测试";
+        [self addSubview:self.myLabel];
+        
+#if kUseAutoLayout
+      [self.myLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+          make.center.equalTo(self);
+      }];
+#else
+        self.myLabel.center = CGPointMake(frame.size.width/2, frame.size.height/2);
+#endif
+        
+    }
+    return self;
 }
 
 -(void)setNeedsUpdateConstraints{
@@ -45,26 +74,11 @@
     [super layoutSubviews];
 }
 
--(void)setNeedsDisplay{
-    NSLog(@"%s",__FUNCTION__);
-    [super setNeedsDisplay];
-}
-
 #pragma mark - CALayerDelegate
 
 - (void)layoutSublayersOfLayer:(CALayer *)layer{
     NSLog(@"%s",__FUNCTION__);
     [super layoutSublayersOfLayer:layer];
-}
-
--(void)displayLayer:(CALayer *)layer{
-    NSLog(@"%s",__FUNCTION__);
-    [super displayLayer:layer];
-}
-
--(void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx{
-    NSLog(@"%s",__FUNCTION__);
-    [super drawLayer:layer inContext:ctx];
 }
 
 @end

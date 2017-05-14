@@ -10,7 +10,7 @@
 #import "MyView.h"
 #import "Masonry.h"
 
-#define kUseAutoLayout  1
+#define kUseAutoLayout  0
 
 @interface TestLayoutOrderVC ()
 

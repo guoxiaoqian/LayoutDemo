@@ -7,12 +7,14 @@
 //
 
 #import "TestConstraintConflictVC.h"
+#import "Masonry.h"
 
 @interface TestConstraintConflictVC ()
 @property (weak, nonatomic) IBOutlet UIView *outerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *innerViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *outerViewHeightConstraint;
 
+@property (weak, nonatomic) IBOutlet UIView *placeHoderView;
 
 @end
 
@@ -22,6 +24,21 @@
     [super viewDidLoad];
 
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    if (self.placeHoderView.hasAmbiguousLayout) { //ViewDidLoad里，布局引擎还没计算过，不知道有歧义
+        NSLog(@"PlaceHoderView hasAmbiguousLayout 1");
+        [self.placeHoderView exerciseAmbiguityInLayout];
+    }
+    [self.placeHoderView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(100);
+    }];
+    if (self.placeHoderView.hasAmbiguousLayout) { //添加约束，触发布局引擎计算，知道有歧义
+        NSLog(@"PlaceHoderView hasAmbiguousLayout 2");
+    }
+    [self.placeHoderView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(100);
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,6 +48,10 @@
 
 -(void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
 }
 
 - (IBAction)didClickChangeInnerViewHeight:(id)sender {

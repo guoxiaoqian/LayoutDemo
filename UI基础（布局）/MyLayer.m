@@ -25,19 +25,4 @@
     [super layoutSublayers];
 }
 
--(void)setNeedsDisplay{
-    NSLog(@"%s",__FUNCTION__);
-    [super setNeedsDisplay];
-}
-
--(void)displayIfNeeded{
-    NSLog(@"%s",__FUNCTION__);
-    [super displayIfNeeded];
-}
-
--(void)display{
-    NSLog(@"%s",__FUNCTION__);
-    [super display];
-}
-
 @end
