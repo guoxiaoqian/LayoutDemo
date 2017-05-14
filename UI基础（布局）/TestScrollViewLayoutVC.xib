@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestScrollViewLayoutVC">
+            <connections>
+                <outlet property="scrollContentInnerViewHeightConstraint" destination="gLz-SO-uQ5" id="fqh-bQ-Alo"/>
+                <outlet property="scrollContentView" destination="gkC-87-dti" id="yjH-m1-W53"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gms-PD-Hq1">
+                    <rect key="frame" x="0.0" y="40" width="375" height="200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkC-87-dti">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnu-hm-FGf">
+                                    <rect key="frame" x="10" y="10" width="355" height="280"/>
+                                    <color key="backgroundColor" red="0.3294117647" green="0.68235294120000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="280" id="gLz-SO-uQ5"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.97473609760000002" blue="0.18472272370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="gnu-hm-FGf" secondAttribute="bottom" constant="10" id="NQy-o1-TY2"/>
+                                <constraint firstItem="gnu-hm-FGf" firstAttribute="top" secondItem="gkC-87-dti" secondAttribute="top" constant="10" id="V90-79-fmV"/>
+                                <constraint firstAttribute="trailing" secondItem="gnu-hm-FGf" secondAttribute="trailing" constant="10" id="dkB-fH-OJJ"/>
+                                <constraint firstItem="gnu-hm-FGf" firstAttribute="leading" secondItem="gkC-87-dti" secondAttribute="leading" constant="10" id="wE5-Es-ynF"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="gkC-87-dti" firstAttribute="leading" secondItem="Gms-PD-Hq1" secondAttribute="leading" id="9WA-np-YSA"/>
+                        <constraint firstAttribute="height" constant="200" id="O7X-2A-6gD"/>
+                        <constraint firstAttribute="trailing" secondItem="gkC-87-dti" secondAttribute="trailing" id="QeG-vp-tDo"/>
+                        <constraint firstAttribute="bottom" secondItem="gkC-87-dti" secondAttribute="bottom" id="iSk-2j-OBB"/>
+                        <constraint firstItem="gkC-87-dti" firstAttribute="top" secondItem="Gms-PD-Hq1" secondAttribute="top" id="lcO-p4-MNC"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2f-ci-KVw">
+                    <rect key="frame" x="16" y="0.0" width="123" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="改变滑动内容高度"/>
+                    <connections>
+                        <action selector="didClickChangeScrollContentInnerViewHeight:" destination="-1" eventType="touchUpInside" id="C61-Fx-dt1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gkC-87-dti" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="bJk-QH-zEo"/>
+                <constraint firstItem="Gms-PD-Hq1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="cIt-QU-gSu"/>
+                <constraint firstAttribute="trailing" secondItem="Gms-PD-Hq1" secondAttribute="trailing" id="pha-cU-fQW"/>
+                <constraint firstItem="Gms-PD-Hq1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ppu-aw-0VM"/>
+            </constraints>
+            <point key="canvasLocation" x="49" y="77"/>
+        </view>
+    </objects>
+</document>
