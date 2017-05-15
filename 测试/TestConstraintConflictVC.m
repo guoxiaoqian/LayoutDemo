@@ -25,19 +25,19 @@
 
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    if (self.placeHoderView.hasAmbiguousLayout) { //ViewDidLoad里，布局引擎还没计算过，不知道有歧义
-        NSLog(@"PlaceHoderView hasAmbiguousLayout 1");
-        [self.placeHoderView exerciseAmbiguityInLayout];
-    }
-    [self.placeHoderView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(100);
-    }];
-    if (self.placeHoderView.hasAmbiguousLayout) { //添加约束，触发布局引擎计算，知道有歧义
-        NSLog(@"PlaceHoderView hasAmbiguousLayout 2");
-    }
-    [self.placeHoderView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(100);
-    }];
+//    if (self.placeHoderView.hasAmbiguousLayout) { //ViewDidLoad里，布局引擎还没计算过，不知道有歧义
+//        NSLog(@"PlaceHoderView hasAmbiguousLayout 1");
+//        [self.placeHoderView exerciseAmbiguityInLayout];
+//    }
+//    [self.placeHoderView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.width.mas_equalTo(100);
+//    }];
+//    if (self.placeHoderView.hasAmbiguousLayout) { //添加约束，触发布局引擎计算，知道有歧义
+//        NSLog(@"PlaceHoderView hasAmbiguousLayout 2");
+//    }
+//    [self.placeHoderView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.height.mas_equalTo(100);
+//    }];
     
 }
 

@@ -10,6 +10,8 @@
 #import "TestLayoutOrderVC.h"
 #import "TestConstraintConflictVC.h"
 #import "TestScrollViewLayoutVC.h"
+#import "TestIntrinsicSizeVC.h"
+#import "TestLayoutAnimationVC.h"
 
 @interface ViewController ()
 
@@ -38,6 +40,14 @@
 
 -(IBAction)testScrollViewLayout:(id)sender{
     [self.navigationController pushViewController:[TestScrollViewLayoutVC new] animated:YES];
+}
+
+-(IBAction)testIntrinsicSize:(id)sender{
+    [self.navigationController pushViewController:[TestIntrinsicSizeVC new] animated:YES];
+}
+
+-(IBAction)testLayoutAnimation:(id)sender{
+    [self.navigationController pushViewController:[TestLayoutAnimationVC new] animated:YES];
 }
 
 

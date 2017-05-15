@@ -35,6 +35,10 @@
 		880761411EC94BF000722987 /* TestLayoutOrderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8807612C1EC94BF000722987 /* TestLayoutOrderVC.xib */; };
 		880761421EC94BF000722987 /* TestScrollViewLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8807612E1EC94BF000722987 /* TestScrollViewLayoutVC.m */; };
 		880761431EC94BF000722987 /* TestScrollViewLayoutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8807612F1EC94BF000722987 /* TestScrollViewLayoutVC.xib */; };
+		880761471EC98FEC00722987 /* TestIntrinsicSizeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 880761451EC98FEC00722987 /* TestIntrinsicSizeVC.m */; };
+		880761481EC98FEC00722987 /* TestIntrinsicSizeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 880761461EC98FEC00722987 /* TestIntrinsicSizeVC.xib */; };
+		8807614C1EC9900800722987 /* TestLayoutAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8807614A1EC9900800722987 /* TestLayoutAnimationVC.m */; };
+		8807614D1EC9900800722987 /* TestLayoutAnimationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8807614B1EC9900800722987 /* TestLayoutAnimationVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +115,12 @@
 		8807612D1EC94BF000722987 /* TestScrollViewLayoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestScrollViewLayoutVC.h; sourceTree = "<group>"; };
 		8807612E1EC94BF000722987 /* TestScrollViewLayoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestScrollViewLayoutVC.m; sourceTree = "<group>"; };
 		8807612F1EC94BF000722987 /* TestScrollViewLayoutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestScrollViewLayoutVC.xib; sourceTree = "<group>"; };
+		880761441EC98FEC00722987 /* TestIntrinsicSizeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestIntrinsicSizeVC.h; sourceTree = "<group>"; };
+		880761451EC98FEC00722987 /* TestIntrinsicSizeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestIntrinsicSizeVC.m; sourceTree = "<group>"; };
+		880761461EC98FEC00722987 /* TestIntrinsicSizeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestIntrinsicSizeVC.xib; sourceTree = "<group>"; };
+		880761491EC9900800722987 /* TestLayoutAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLayoutAnimationVC.h; sourceTree = "<group>"; };
+		8807614A1EC9900800722987 /* TestLayoutAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLayoutAnimationVC.m; sourceTree = "<group>"; };
+		8807614B1EC9900800722987 /* TestLayoutAnimationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestLayoutAnimationVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +228,12 @@
 				8807612D1EC94BF000722987 /* TestScrollViewLayoutVC.h */,
 				8807612E1EC94BF000722987 /* TestScrollViewLayoutVC.m */,
 				8807612F1EC94BF000722987 /* TestScrollViewLayoutVC.xib */,
+				880761441EC98FEC00722987 /* TestIntrinsicSizeVC.h */,
+				880761451EC98FEC00722987 /* TestIntrinsicSizeVC.m */,
+				880761461EC98FEC00722987 /* TestIntrinsicSizeVC.xib */,
+				880761491EC9900800722987 /* TestLayoutAnimationVC.h */,
+				8807614A1EC9900800722987 /* TestLayoutAnimationVC.m */,
+				8807614B1EC9900800722987 /* TestLayoutAnimationVC.xib */,
 			);
 			name = "测试";
 			path = "../测试";
@@ -372,12 +388,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				880760E21EC94AED00722987 /* LaunchScreen.storyboard in Resources */,
+				8807614D1EC9900800722987 /* TestLayoutAnimationVC.xib in Resources */,
 				880760DF1EC94AED00722987 /* Assets.xcassets in Resources */,
 				8807613F1EC94BF000722987 /* TestConstraintConflictVC.xib in Resources */,
 				880761411EC94BF000722987 /* TestLayoutOrderVC.xib in Resources */,
 				880761431EC94BF000722987 /* TestScrollViewLayoutVC.xib in Resources */,
 				880761301EC94BF000722987 /* LICENSE in Resources */,
 				880760DD1EC94AED00722987 /* Main.storyboard in Resources */,
+				880761481EC98FEC00722987 /* TestIntrinsicSizeVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +439,8 @@
 				880761351EC94BF000722987 /* MASViewAttribute.m in Sources */,
 				880761321EC94BF000722987 /* MASConstraint.m in Sources */,
 				880761331EC94BF000722987 /* MASConstraintMaker.m in Sources */,
+				880761471EC98FEC00722987 /* TestIntrinsicSizeVC.m in Sources */,
+				8807614C1EC9900800722987 /* TestLayoutAnimationVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
